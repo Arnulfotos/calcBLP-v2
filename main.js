@@ -75,7 +75,7 @@ function computeResult(e) {
 
   /* TOTAL */
 
-  div.innerHTML += `<p> El total a pagar es de $${calcTotal} pesos</p> <br>  <hr />`;
+  div.innerHTML += `<p> El total a pagar es de $${calcTotal} pesos</p> <br>  <hr /> <br>`;
 
 
 

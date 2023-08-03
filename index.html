@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arnulfotos mira este cambiaso</title>
   <script defer src="main.js"></script>
 
@@ -15,8 +15,12 @@
 </head>
 
 <body>
-  <div class="form-main-wrapper">
+ 
     <div class="form-wrapper">
+
+
+
+
       <div class="titulo">
         <h1>Balneario Las Palmas</h1>
         <div class="titulo-item">
@@ -25,42 +29,56 @@
           <p id="d1"></p>
         </div>
       </div>
+      
+
+    
       <form action="" id="form">
         <div class="container">
           <label for="nombre" class="texto-formulario">Nombre</label>
           <input type="text" class="texto-input" name="nombre" id="nombre" />
         </div>
         <!-- nombre -->
+
+
         <fieldset>
+
           <legend>Servicio</legend>
-          <div class="container-flex">
-            <div>
-              <label for="entrada-general" class="texto-formulario">Dia:</label>
-              <input class="texto-input" id="entrada-general" type="number" />
-            </div>
-            <div>
-              <label for="camping" class="texto-formulario">Camping:</label>
-              <input id="camping" type="number" class="texto-input" />
-            </div>
-          </div>
-          <div class="container-flex">
-            <div>
-              <label for="entrada-general" class="texto-formulario">Dias en cabaña</label>
-              <input id="entrada-general" class="texto-input" type="text" />
-            </div>
-            <div>
-              <label for="numero-cabanas" class="texto-formulario">Cabañas
-              </label>
-              <select name="numero-cabanas" class="texto-input">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </div>
-          </div>
+       <div class="containerServicio">
+        <div>
+          <label for="entrada-general" class="texto-formulario">Dia:</label>
+          <input class="texto-input" id="entrada-general" type="number" />
+        </div>
+
+        <div>
+          <label for="camping" class="texto-formulario">Camping:</label>
+          <input id="camping" type="number" class="texto-input" />
+        </div>
+    
+  
+        <div>
+          <label for="entrada-general" class="texto-formulario">Dias en cabaña</label>
+          <input id="entrada-general" class="texto-input" type="text" />
+        </div>
+        <div>
+          <label for="numero-cabanas" class="texto-formulario">Cabañas
+          </label>
+          <select name="numero-cabanas" class="texto-input">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+            
+
+
+
         </fieldset>
+
+
+
         <!-- servicio -->
         <fieldset>
           <legend>Personas y vehiculos</legend>
@@ -74,14 +92,14 @@
               <input id="camping" type="text" class="texto-input" />
             </div>
             <div>
-              <label for="auto" class="texto-formulario">Automoviles</label>
+              <label for="auto" class="texto-formulario">Autos</label>
               <input id="auto" type="text" class="texto-input" />
             </div>
           </div>
         </fieldset>
         <fieldset>
           <legend>Horarios</legend>
-          <div class="container-flex">
+          <div class="">
             <div>
               <label for="entrada" class="texto-formulario">Entrada</label>
               <input id="entrada" class="texto-input" type="datetime-local" />
@@ -94,11 +112,12 @@
           <p>Importante anticipar su salida minimo 15 minutos antes</p>
         </fieldset>
         <div id="preview"></div>
+        <div>
+          <label for="total" class="texto-formulario">Total </label>
+          <input id="total" type="number" class="texto-input" />
+        </div>
         <div class="container-flex">
-          <div>
-            <label for="total" class="texto-formulario">Total </label>
-            <input id="total" type="number" class="texto-input" />
-          </div>
+     
           <div>
             <input type="submit" value="Calcular" class="button calc" id="calc" />
           </div>
@@ -108,15 +127,15 @@
           </div>
         </div>
       </form>
-      <!--
-          This script places a badge on your repl's full-browser view back to your repl's cover
-          page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-          teal, blue, blurple, magenta, pink!
-          -->
-      <script src="https://replit.com/public/js/replit-badge.js" theme="purple" defer></script>
       <p id="copyright"></p>
+      
+      
     </div>
+
+    
+
   </div>
+     
 </body>
 
 </html>
