@@ -35,6 +35,7 @@ justify-content: space-between;
 
 
 p {
+margin-top: 8px;
 font-size: 1.4rem;
 font-weight: 300;
 color: #475d5b;

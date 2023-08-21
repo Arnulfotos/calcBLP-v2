@@ -2,14 +2,38 @@ import { calcNoc } from "./calcNoc";
 import { fecha } from "./dia";
 
 
+const btnCotizar = document.getElementById("calc");
+const cotizacion = document.getElementById("cotizacion")
 
 
+
+let printCot = (cot) => {
+    let p = document.createElement('p')
+    let text = document.createTextNode(cot)
+    let br = document.createElement('br')
+    let hr = document.createElement('hr')
+    p.appendChild(text)
+
+    cotizacion.appendChild(p)
+    cotizacion.appendChild(br)
+    cotizacion.appendChild(hr)
+
+
+}
+
+fecha();
+btnCotizar.addEventListener('click', (e) => {
+    
 const dias = document.getElementById("entrada-general").value;
 const camping = document.getElementById("camping").value;
 const numDePersonas = document.getElementById("num-personas").value;
 const numDeAutos = document.getElementById("auto").value;
 
-fecha();
 
-calcNoc(2,18,3);
+    
+    let cotCamping = calcNoc(camping, numDePersonas, numDeAutos)
+    printCot(cotCamping)
+
+    e.preventDefault();
+})
 

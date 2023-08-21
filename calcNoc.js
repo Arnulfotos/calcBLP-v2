@@ -8,20 +8,17 @@ import {PRECIO_CAMPING, PERSONAS_AUTO, EXTRA_CAMPING} from "./politicasyprecios"
 
 function calcNoc(camping,numDePersonas,numDeAutos) {
 
-    if ( (numDeAutos * PERSONAS_AUTO) < numDePersonas) {
-    
-        let personasExtras = numDePersonas - (numDeAutos * PERSONAS_AUTO);
-        console.log(personasExtras)
-        let cotNoc = ((personasExtras * EXTRA_CAMPING) + (PRECIO_CAMPING * numDeAutos));
-        let total = cotNoc * camping;
-        console.log(total)
-  
-    } else {
-        let total = PRECIO_CAMPING * numDeAutos * camping;
-        console.log(total)
-    }
-        let palabrasFormateadas = wordFormater(0,numDePersonas,numDeAutos,camping)
-        console.log(palabrasFormateadas)
+    let personasExtras = numDePersonas - (numDeAutos * PERSONAS_AUTO);
+
+    let cotNoc = ((personasExtras * EXTRA_CAMPING) + (PRECIO_CAMPING * numDeAutos));
+
+    let total = ( (numDeAutos * PERSONAS_AUTO) < numDePersonas) 
+    ? cotNoc * camping
+    : PRECIO_CAMPING * numDeAutos * camping;
+
+    let palabrasFormateadas = wordFormater(0,numDePersonas,numDeAutos,camping)
+
+        return `El total por ${numDeAutos} ${palabrasFormateadas.auto} con ${numDePersonas} ${palabrasFormateadas.persona} para ${camping} ${palabrasFormateadas.noche} es de ${total} pesos por un horario de 6 p.m. a 9 a.m.`
     };
 
     export {calcNoc}
