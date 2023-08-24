@@ -17,8 +17,9 @@ function calcNoc(camping,numDePersonas,numDeAutos) {
     : PRECIO_CAMPING * numDeAutos * camping;
 
     let palabrasFormateadas = wordFormater(0,numDePersonas,numDeAutos,camping)
-
-        return `El total por ${numDeAutos} ${palabrasFormateadas.auto} con ${numDePersonas} ${palabrasFormateadas.persona} para ${camping} ${palabrasFormateadas.noche} es de ${total} pesos por un horario de 6 p.m. a 9 a.m.`
+    let cotizacionText = `El total por ${numDeAutos} ${palabrasFormateadas.auto} con ${numDePersonas} ${palabrasFormateadas.persona} para ${camping} ${palabrasFormateadas.noche} es de ${total} pesos por un horario de 6 p.m. a 9 a.m.`
+        
+    return [total, cotizacionText]
     };
 
     export {calcNoc}
