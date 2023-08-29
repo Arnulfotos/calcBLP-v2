@@ -79,6 +79,7 @@ background-color: #f2f7f5;
 
 }
 
+
 .form-wrapper {
   display: flex;
   justify-content: center;
@@ -132,7 +133,8 @@ font-weight: 400;
 .flex-3 > div {
   
 
-  width: 30%;
+  width: 50%;
+  padding-right: 20px;
   
   }
 
