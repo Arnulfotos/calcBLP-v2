@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "downloadjs": "^1.4.7",
+    "html-to-image": "^1.11.11"
   }
 }
