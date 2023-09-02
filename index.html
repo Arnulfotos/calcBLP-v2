@@ -36,7 +36,8 @@
       <form action="" id="form">
         <div class="container">
           <label for="nombre" class="texto-formulario">Nombre</label>
-          <input type="text" class="texto-input" name="nombre" id="nombre" />
+          <input type="text" class="texto-input" maxlength="32" autocapitalize="characters" minlength="8"
+          size="32"   name="nombre" id="nombre" />
         </div>
         <!-- nombre -->
 
@@ -45,23 +46,35 @@
 
           <legend>Servicio</legend>
        <div class="containerServicio">
-        <div>
-          <label for="entrada-general" class="texto-formulario">Dia:</label>
-          <input class="texto-input" id="entrada-general" type="number" />
+
+        <div id="service">
+          <label for="servicio" class="texto-formulario">Eliga servicio:
+          </label>
+          <select name="servicio" id="tipo-servicio" class="texto-input">
+            <option value="egeneral-y-camping">Dia y camping</option>
+            <option value="cabana">Cabaña</option>
+          </select>
+
         </div>
 
-        <div>
+        <div id="egeneral">
+          <label for="entrada-general" class="texto-formulario">Dia:</label>
+          <input class="texto-input" id="entrada-general"  min="0" max="31" type="number" />
+        </div>
+
+        <div id="campingCont">
           <label for="camping" class="texto-formulario">Camping:</label>
-          <input id="camping" type="number"  class="texto-input" />
+          <input id="camping" min="0" max="31"  type="number"  class="texto-input" />
         </div>
     
   
-        <div>
-          <label for="dias-encabana" class="texto-formulario">Dias en cabaña</label>
-          <input id="dias-encabana" class="texto-input" type="text" />
+        <div id="dias-cabana">
+          <label for="dias-encabana" class="texto-formulario">Dias Cab:</label>
+          <input id="dias-encabana" class="texto-input" type="number" min="0" max="31"/>
         </div>
-        <div>
-          <label for="numero-cabanas" class="texto-formulario">Cabañas
+
+        <div id="num-cabana">
+          <label for="numero-cabanas" class="texto-formulario">Cabaña:
           </label>
           <select name="numero-cabanas" id="numero-cabanas" class="texto-input">
             <option value="0">0</option>
@@ -71,6 +84,9 @@
             <option value="4">4</option>
           </select>
         </div>
+
+ 
+
       </div>
             
 
@@ -86,7 +102,7 @@
           <div class="flex-3">
             <div>
               <label for="num-personas" class="texto-formulario">Personas</label>
-              <input id="num-personas" type="text" class="texto-input" />
+              <input id="num-personas" min="0" type="number" max="100" class="texto-input" />
             </div>
             <!-- <div>
               <label for="camping" class="texto-formulario">Menores</label>
@@ -94,13 +110,13 @@
             </div> -->
             <div>
               <label for="auto" class="texto-formulario">Autos</label>
-              <input id="auto" type="text" class="texto-input" />
+              <input id="auto" min="0" max="100"  type="number" class="texto-input" />
             </div>
           </div>
         </fieldset>
         <fieldset>
           <legend>Horarios</legend>
-          <div class="">
+          <div class="horarios">
             <div>
               <label for="entrada" class="texto-formulario">Entrada</label>
               <input id="entrada" class="texto-input" type="datetime-local" />
@@ -109,13 +125,19 @@
               <label for="salida" class="texto-formulario">Salida </label>
               <input id="salida" class="texto-input" type="datetime-local" />
             </div>
+            <div id="diaExtraCont">
+              <label for="dia-extra-cab" class="texto-formulario">Salida a las 6 p.m.</label>
+              <input type="checkbox" name="dia-extra-cabana"  id="dia-extra-cab"/>
+             
+              
+            </div>
           </div>
           <p>Importante anticipar su salida minimo 15 minutos antes</p>
         </fieldset>
         <div id="preview"></div>
         <div>
           <label for="total" class="texto-formulario">Total </label>
-          <input id="total" type="number" class="texto-input" />
+          <input id="total" type="number" class="texto-input" min="0" />
         </div>
         <div class="container-flex">
      

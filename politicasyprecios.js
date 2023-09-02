@@ -10,3 +10,6 @@ export const PERSONAS_CABANA = 5;
 export const MAX_PERSONAS_CABANA = 6;
 export const AUTOS_CABANA = 1;
 
+export const diaHoras = 9
+export const nocheHoras = 15
+export const horasCabana = 23

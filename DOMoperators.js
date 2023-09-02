@@ -1,5 +1,9 @@
+let numCot = 0;
+
 let printCot = (cot, domElement) => {
     let p = document.createElement("p");
+    numCot += 1
+    p.setAttribute('id', `${numCot}`)
     let text = document.createTextNode(cot);
     p.appendChild(text);
   
