@@ -58,7 +58,7 @@ camping.value = ""; */
 
 
 
-diaEntrada.addEventListener('change', ()=>{
+diaEntrada.addEventListener('change', () => {
 
   function addHours(date, hours) {
     let result = new Date(date);
@@ -89,7 +89,7 @@ diaEntrada.addEventListener('change', ()=>{
 
 
 
-document.addEventListener("wheel", function (event) {
+document.addEventListener("wheel", function(event) {
   if (document.activeElement.type === "number") {
     document.activeElement.blur();
   }
@@ -104,22 +104,22 @@ let removeDiaExtra = (currentCot) => {
   currentCot.removeChild(diaExtra)
   currentCot.removeChild(total)
 
-  console.log(diaExtra,total)
-  
+  console.log(diaExtra, total)
+
 }
 let previousValue = []
-diaExtraCont.addEventListener('change', (e)=>{
+diaExtraCont.addEventListener('change', (e) => {
 
   console.log(previousValue)
 
   let currentCot = document.getElementById('1')
 
 
-  if(!currentCot) {
+  if (!currentCot) {
     cotizarCabanas(e);
   }
-  
-  if(e.target.checked) {
+
+  if (e.target.checked) {
 
     let currentCot = document.getElementById('1')
 
@@ -127,9 +127,8 @@ diaExtraCont.addEventListener('change', (e)=>{
 
     printCot(cotEGeneral[1], currentCot)
 
-    let calcTotal = ` El total a pagar es de ${
-      parseInt(totalInput.value) + cotEGeneral[0]
-    } pesos`;
+    let calcTotal = ` El total a pagar es de ${parseInt(totalInput.value) + cotEGeneral[0]
+      } pesos`;
 
     printCot(calcTotal, currentCot)
     previousValue.push(totalInput.value)
@@ -151,32 +150,32 @@ diaExtraCont.addEventListener('change', (e)=>{
     ).slice(-2)}-${("0" + fechaSalida.getDate()).slice(-2)}T${(
       "0" + fechaSalida.getHours()
     ).slice(-2)}:00`;
-  
+
     diaSalida.value = inputSalida;
 
-    
+
 
   } else {
 
     removeDiaExtra(currentCot);
     totalInput.value = previousValue[0]
     diaSalida.value = previousValue[1]
-    
+
 
 
   }
 
-  
+
 })
 
 // Selecciona Servicio
 selectService.addEventListener("change", (e) => {
-   numDePersonas.value = "";
-   numDeAutos.value = "";
-   diasEnCabana.value = "";
-   cabanas.value = "";
-   dias.value = "";
-   camping.value = "";
+  numDePersonas.value = "";
+  numDeAutos.value = "";
+  diasEnCabana.value = "";
+  cabanas.value = "";
+  dias.value = "";
+  camping.value = "";
 
 
   switch (e.target.value) {
@@ -204,7 +203,7 @@ selectService.addEventListener("change", (e) => {
 //Agregar fecha
 fecha();
 
-document.body.addEventListener( 'click', function ( event ) {
+/*document.body.addEventListener( 'click', function ( event ) {
   if( event.target.id == 'delete' ) {
     let cotizacion = event.target.parentNode
 console.log(cotizacion.parentNode)
@@ -238,7 +237,7 @@ console.log(cotizacion.parentNode)
 
 event.preventDefault();
 });
-
+*/
 
 //Cotizar
 
@@ -247,15 +246,31 @@ event.preventDefault();
 img.addEventListener("click", (e) => {
 
   let date = new Date();
-diaExtraCont.style.display="none"
+  diaExtraCont.style.display = "none"
 
 
 
   const imgBody = document.getElementById("img-body");
-  htmlToImage.toPng(imgBody, {}).then(function (dataUrl) {
+  htmlToImage.toPng(imgBody, {}).then(function(dataUrl) {
     download(dataUrl, `${date.toISOString()}-${nombre.value || "reservacion-blp"}.png`);
   });
 
   e.preventDefault();
 });
 
+btnCotizar.addEventListener('click', (e) => {
+  switch (selectService.value) {
+    case "egeneral-y-camping":
+      cotizarCampingyEntrada(e);
+
+
+      break;
+
+    case "cabana":
+      cotizarCabanas(e);
+
+      break;
+  }
+
+  e.preventDefault()
+})
