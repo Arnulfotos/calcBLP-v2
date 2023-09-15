@@ -8,7 +8,8 @@ import { calcDia } from "./calcDia";
 import { printCot, endCot } from "./DOMoperators";
 import { setDates } from "./setDates";
 
-
+const botonesCont = document.getElementsByClassName("container-flex")[0]
+console.log(botonesCont)
 
 const camping = document.getElementById("camping");
 const numDePersonas = document.getElementById("num-personas");
@@ -36,6 +37,7 @@ const cabContainer = document.getElementById("num-cabana");
 const eGeneralContainer = document.getElementById("egeneral");
 const campingContainer = document.getElementById("campingCont");
 const diaExtraCont = document.getElementById('diaExtraCont')
+const service = document.getElementById('service')
 
 let delBut = document.getElementById('delete')
 
@@ -203,50 +205,15 @@ selectService.addEventListener("change", (e) => {
 //Agregar fecha
 fecha();
 
-/*document.body.addEventListener( 'click', function ( event ) {
-  if( event.target.id == 'delete' ) {
-    let cotizacion = event.target.parentNode
-console.log(cotizacion.parentNode)
-
-    let imgBody = document.getElementById('img-body')
-    imgBody.removeChild(cotizacion)
-
-    let div = document.createElement('div')
-    div.setAttribute('id', 'cotizacion')
-    imgBody.appendChild(div)
-   
-  };
-
-    if (event.target.id == 'calc') {
-
-  switch (selectService.value) {
-    case "egeneral-y-camping":
-      cotizarCampingyEntrada(event);
-
-
-      break;
-
-    case "cabana":
-      cotizarCabanas(event);
-
-      break;
-    }
-
-
-}
-
-event.preventDefault();
-});
-*/
-
-//Cotizar
-
 
 //Crea ticket
 img.addEventListener("click", (e) => {
 
   let date = new Date();
   diaExtraCont.style.display = "none"
+  service.style.display = "none"
+  botonesCont.style.display = "none"
+
 
 
 
@@ -254,6 +221,7 @@ img.addEventListener("click", (e) => {
   htmlToImage.toPng(imgBody, {}).then(function(dataUrl) {
     download(dataUrl, `${date.toISOString()}-${nombre.value || "reservacion-blp"}.png`);
   });
+
 
   e.preventDefault();
 });

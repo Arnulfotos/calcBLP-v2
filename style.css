@@ -14,11 +14,13 @@ padding: 0;
 
 h1 {
 font-weight: 900;
-font-size: 3.2rem;
+font-size: 3.0rem;
 color: #00473e;
 margin-bottom: 5px;
 width: 100%;
 }
+
+
 
 #service {
   width: 100%;
@@ -31,18 +33,14 @@ width: 100%;
 margin-bottom: 20px;
 }
 
-.titulo-item {
-display: flex;
-justify-content: space-between;
 
 
-}
 
 
 p {
 margin-top: 8px;
 font-size: 1.4rem;
-font-weight: 300;
+font-weight: 400;
 color: #475d5b;
 }
 
@@ -66,7 +64,7 @@ color: #475d5b;
 line-height: 16px;
 display: block;
 margin: 0 0 15px 0;
-font-weight: 700;
+font-weight: 800;
 
 }
 
@@ -75,7 +73,7 @@ padding: 8px 10px;
 width: 100%;
 min-height: 42px;
 font-size: 1.6rem;
-font-weight: 400;
+font-weight: 500;
 border-radius: 5px;
 border: 1px solid #dde3ec;
 resize: none;
@@ -129,6 +127,7 @@ padding-right: 20px;
 #diaExtraCont {
   display: flex;
 }
+
 
 
 .horarios > #diaExtraCont > label {
@@ -201,3 +200,21 @@ input {
   
   
 }
+
+.entrada {
+  background-color: #00473e;
+  color: white;
+}
+
+.salida {
+  background-color: #faae2b;
+}
+
+
+
+.titulo-item {
+  display: flex;
+  justify-content: space-between;
+  
+  }
+
