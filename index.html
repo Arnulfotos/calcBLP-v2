@@ -35,7 +35,7 @@
       <form action="" id="form">
         <div class="container">
           <label for="nombre" class="texto-formulario">Nombre</label>
-          <input type="text" class="texto-input" maxlength="32" autocapitalize="characters" minlength="8"
+          <input type="text" class="texto-input nombre" maxlength="32" autocapitalize="characters" minlength="8"
           size="32"   name="nombre" id="nombre" />
         </div>
         <!-- nombre -->
@@ -58,24 +58,24 @@
 
         <div id="egeneral">
           <label for="entrada-general" class="texto-formulario">Dia:</label>
-          <input class="texto-input" id="entrada-general"  min="0" max="31" type="number" />
+          <input class="texto-input entrada" id="entrada-general"  min="0" max="31" type="number" />
         </div>
 
         <div id="campingCont">
           <label for="camping" class="texto-formulario">Camping:</label>
-          <input id="camping" min="0" max="31"  type="number"  class="texto-input" />
+          <input id="camping" min="0" max="31"  type="number"  class="texto-input entrada" />
         </div>
     
   
         <div id="dias-cabana">
           <label for="dias-encabana" class="texto-formulario">Dias Cab:</label>
-          <input id="dias-encabana" class="texto-input" type="number" min="0" max="31"/>
+          <input id="dias-encabana" class="texto-input entrada" type="number" min="0" max="31"/>
         </div>
 
         <div id="num-cabana">
           <label for="numero-cabanas" class="texto-formulario">Cabaña:
           </label>
-          <select name="numero-cabanas" id="numero-cabanas" class="texto-input">
+          <select name="numero-cabanas" id="numero-cabanas" class="texto-input entrada">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -101,7 +101,7 @@
           <div class="flex-3">
             <div>
               <label for="num-personas" class="texto-formulario">Personas</label>
-              <input id="num-personas" min="0" type="number" max="100" class="texto-input" />
+              <input id="num-personas" min="0" type="number" max="100" class="texto-input salida" />
             </div>
             <!-- <div>
               <label for="camping" class="texto-formulario">Menores</label>
@@ -109,7 +109,7 @@
             </div> -->
             <div>
               <label for="auto" class="texto-formulario">Autos</label>
-              <input id="auto" min="0" max="100"  type="number" class="texto-input" />
+              <input id="auto" min="0" max="100"  type="number" class="texto-input salida" />
             </div>
           </div>
         </fieldset>
@@ -136,7 +136,7 @@
         <div id="preview"></div>
         <div>
           <label for="total" class="texto-formulario">Total </label>
-          <input id="total" type="number" class="texto-input" min="0" />
+          <input id="total" type="number" class="texto-input nombre" min="0" />
         </div>
         <div class="container-flex">
      

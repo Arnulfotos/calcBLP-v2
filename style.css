@@ -72,8 +72,8 @@ font-weight: 800;
 padding: 8px 10px;
 width: 100%;
 min-height: 42px;
-font-size: 1.6rem;
-font-weight: 500;
+font-size: 1.8rem;
+font-weight: 700;
 border-radius: 5px;
 border: 1px solid #dde3ec;
 resize: none;
@@ -218,3 +218,8 @@ input {
   
   }
 
+.nombre {
+  background-color: #abd1c6;
+  font-weight: 700;
+  color: #0f3433;
+}
